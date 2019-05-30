@@ -1,0 +1,5 @@
+export const ADD_IMAGE = 'ADD_IMAGE'
+export const UPDATE_TIMER = 'UPDATE_TIMER'
+export const ADD_POINTS = 'ADD_POINTS'
+export const SUB_POINTS = 'SUB_POINTS'
+export const IMPORT_POINTS = 'IMPORT_POINTS'
