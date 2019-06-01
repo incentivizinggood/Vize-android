@@ -63,21 +63,26 @@ const App = (props) => (
 					icon={TabIcon} 
 					hideNavBar={true} 
 					component={HomeTab}
-					initial />
+					initial 
+					/>
 				<Scene 
 					key="JobsTab" 
 					title="Jobs" 
 					iconName="Jobs" 
 					icon={TabIcon} 
 					hideNavBar={true} 
-				  	component={JobsTab} />
+				  	component={JobsTab} 
+					//initial
+					/>
 				<Scene 
 					key="ReviewTab" 
 					title="Review" 
 					iconName="Review" 
 					icon={TabIcon} 
 					hideNavBar={true} 
-					component={ReviewTab} />
+					component={ReviewTab} 
+					// initial
+					/>
 				<Scene 
 					key="CompaniesTab" 
 					title="Companies" 
