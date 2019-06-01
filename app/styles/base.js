@@ -1,10 +1,12 @@
-import {StyleSheet, Dimensions} from 'react-native'
+import {Platform, StatusBar, StyleSheet, Dimensions} from 'react-native'
+
+const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
 
 export const dimensions = {
 	fullHeight: Dimensions.get('window').height,
 	fullWidth: Dimensions.get('window').width
 }
-  
+
 export const colors  = {
 	primary: '#226B74',
 	secondary: '#254B5A',
@@ -27,9 +29,7 @@ export const fonts = {
 
 const baseStyles = {
 	container: {
-		// flexDirection: 'row',
 		alignItems: 'center',
-		// height:
 		flex: 1,
 		backgroundColor: '#fff'
 	},
@@ -44,7 +44,17 @@ const baseStyles = {
 		paddingHorizontal: padding.xl
 	},
 	statusBar: {
-		color: '#279AD4'
+        height: STATUSBAR_HEIGHT,
+        backgroundColor: '#47A6D6',
+	},
+	navTitle: {
+		flex: 1,
+		color: '#FFF',
+		textAlign: 'center',
+	},
+	navBar: {
+		backgroundColor: '#47A6D6',
+		marginTop: STATUSBAR_HEIGHT
 	},
 }
   

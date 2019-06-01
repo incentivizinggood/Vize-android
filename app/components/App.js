@@ -1,31 +1,30 @@
 import React from 'react'
-// import Map from './Map'
-// import Story from './Story'
-// import Camera from './Camera'
 import Home from './Home'
-import SignUp from './Home/SignUp'
 import Login from './Home/Login'
+import SignUp from './Home/SignUp'
 import HomeTab from './Tabs/HomeTab'
 import JobsTab from './Tabs/JobsTab'
 import ReviewTab from './Tabs/ReviewTab'
-import CompaniesTab from './Tabs/CompaniesTab'
 import ProfileTab from './Tabs/ProfileTab'
+import CompaniesTab from './Tabs/CompaniesTab'
+import TabIcon from './TabIcon'
+import createStyles from '../styles/base'
 import {Router, Scene, Stack} from 'react-native-router-flux'
-import {StatusBar} from 'react-native'
 import PropTypes from 'prop-types'
-import {StyleSheet} from 'react-native'
+
+const styles = createStyles()
 
 const App = (props) => (
-	<Router {...props} navigationBarStyle={{backgroundColor: "#fff"}}>
+	<Router {...props}>
 		<Stack key="root">
 			<Scene
 				key="Home"
 				component={Home}
 				hideNavBar={true}
 				title="Vize"
-				navigationBarStyle={styles.navBar}
+				navigationBarStyle={styles.statusBar}
 				titleStyle={styles.navTitle}
-				// initial
+				initial
 			/>
 			<Scene
 				key="SignUp"
@@ -54,39 +53,52 @@ const App = (props) => (
 				tabBarPosition="bottom"
 				navigationBarStyle={styles.navBar}
 				titleStyle={styles.navTitle}
-				initial
+				default="HomeTab"
+				// initial
 			>
-				<Scene key="HomeTab" title="Home" hideNavBar={true} component={HomeTab} />
-      			<Scene key="JobsTab" title="Jobs" hideNavBar={true} component={JobsTab} />
-				<Scene key="ReviewTab" title="Review" hideNavBar={true} component={ReviewTab} />
-      			<Scene key="CompaniesTab" title="Companies" hideNavBar={true} component={CompaniesTab} />
-				<Scene key="ProfileTab" title="Profile" hideNavBar={true} component={ProfileTab} />
+				<Scene 
+					key="HomeTab" 
+					title="Home" 
+					iconName="Home" 
+					icon={TabIcon} 
+					hideNavBar={true} 
+					component={HomeTab}
+					initial />
+				<Scene 
+					key="JobsTab" 
+					title="Jobs" 
+					iconName="Jobs" 
+					icon={TabIcon} 
+					hideNavBar={true} 
+				  	component={JobsTab} />
+				<Scene 
+					key="ReviewTab" 
+					title="Review" 
+					iconName="Review" 
+					icon={TabIcon} 
+					hideNavBar={true} 
+					component={ReviewTab} />
+				<Scene 
+					key="CompaniesTab" 
+					title="Companies" 
+					iconName="Companies" 
+					icon={TabIcon} 
+				  	hideNavBar={true} 
+				  	component={CompaniesTab} />
+				<Scene 
+					key="ProfileTab" 
+					title="Profile" 
+					iconName="Profile" 
+					icon={TabIcon} 
+					hideNavBar={true} 
+					component={ProfileTab} />
 			</Scene>
-			
 		</Stack>
 	</Router>
 )
 
-// App.propTypes = {
-// 	// timer: PropTypes.bool.isRequired,
-// 	// images: PropTypes.object.isRequired,
-// 	// addImage: PropTypes.func.isRequired,
-// 	// updateTimer: PropTypes.func.isRequired,
-// }
+App.propTypes = {}
 
 console.disableYellowBox = true
-
-const styles = StyleSheet.create({
-	navBar: {
-		backgroundColor: '#47A6D6',
-		marginTop: StatusBar.currentHeight
-	},
-	navTitle: {
-		flex: 1,
-		color: '#FFF',
-		textAlign: 'center',
-		
-	},
-})
 
 export default App

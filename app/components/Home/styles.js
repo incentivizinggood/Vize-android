@@ -6,9 +6,6 @@ import {StyleSheet} from 'react-native'
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
 
 const styles = createStyles({
-	statusBar: {
-		height: STATUSBAR_HEIGHT,
-	},
 	mainLogo: {
 		opacity: 1,
 		height: hp("15%"),

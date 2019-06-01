@@ -24,6 +24,10 @@ export default class HomeTab extends Component {
       // Actions.Login()
     }
 
+    highlightPress = () => {
+
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -37,26 +41,14 @@ export default class HomeTab extends Component {
                 <Image
                   style={styles.backgroundPhoto}
                   source={require("../../assets/WeCanDoIt.jpg")}
-                  resizeMode="contain"
+                //   resizeMode="contain"
                 />
-                <Text style={styles.mainText}>
-                  Las mejores oportunidades para ti
-                </Text>
                 <Button
-                  style={styles.signUpButton}
-                  textStyle={styles.signSkipText}
-                  text='Sign Up'
-                  onPress={() => this.onSignUpPress()} />
-                <Button
-                  style={styles.loginButton}
-                  textStyle={styles.loginText}
-                  text='Log In'
-                  onPress={() => this.onLoginPress()} />
-                <Button
-                  style={styles.skipButton}
-                  textStyle={styles.signSkipText}
-                  text='Skip'
-                  onPress={() => this.onSkipPress()} />
+                    style={styles.loginSignupButton}
+                    textStyle={styles.loginSignupButtonText}
+                    text="Earn $100 pesos by sharing your work experience"
+                    onPress={()=> {this.highlightPress()}}
+                />
             </View>
         )
     }

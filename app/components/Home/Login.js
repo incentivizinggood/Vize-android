@@ -13,12 +13,12 @@ export default class SignUp extends Component {
 
     authenticateUser = () => {
         //make api call and other stuff
-        Actions.Map()
+        // Actions.Map()
     }
 
     onSignUpPress = () => {
         this.setState({stopTimer: true})
-        // Actions.Login()
+        Actions.TabsView()
     }
 
     render() {

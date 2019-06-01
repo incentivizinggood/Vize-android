@@ -6,16 +6,14 @@ import {StyleSheet} from 'react-native'
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
 
 const styles = createStyles({
-	statusBar: {
-		height: STATUSBAR_HEIGHT,
-    },
     navBar: {
-        backgroundColor: "#fff"
-    },
+		backgroundColor: '#47A6D6',
+		marginTop: STATUSBAR_HEIGHT
+	},
 	backgroundPhoto: {
 		// opacity: 1,
-		height: hp("52%"),
-		// marginTop: hp("15%"),
+		height: hp("45%"),
+		marginTop: hp("0%"),
 		width: wp("100%"),
 	},
 	vLogo: {
@@ -25,7 +23,7 @@ const styles = createStyles({
 		width: wp("10%"),
 	},
 	mainText: {
-		marginTop: hp("12%"),
+		marginTop: hp("0%"),
 		backgroundColor: "transparent",
 		fontSize: 18,
 		color: "#9b9b9b",

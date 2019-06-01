@@ -11,17 +11,17 @@ export default class MainScreen extends Component {
 
     onLoginPress = () => {
       this.setState({stopTimer: true})
-      // Actions.Login()
+      Actions.Login()
     }
 
     onSignUpPress = () => {
       this.setState({stopTimer: true})
-      // Actions.Login()
+      Actions.SignUp()
     }
 
     onSkipPress = () => {
       this.setState({stopTimer: true})
-      // Actions.Login()
+      Actions.TabsView()
     }
     
     render() {

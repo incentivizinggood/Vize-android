@@ -10,17 +10,14 @@ export default class CompaniesTab extends Component {
     state = {}
 
     onLoginPress = () => {
-      this.setState({stopTimer: true})
       // Actions.Login()
     }
 
     onSignUpPress = () => {
-      this.setState({stopTimer: true})
       // Actions.Login()
     }
 
     onSkipPress = () => {
-      this.setState({stopTimer: true})
       // Actions.Login()
     }
     
