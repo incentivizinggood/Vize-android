@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, Image } from 'react-native'
+import {View, Text, Image, TextInput } from 'react-native'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
 // import {LoginButton, AccessToken} from 'react-native-fbsdk';

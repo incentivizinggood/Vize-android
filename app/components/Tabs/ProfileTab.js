@@ -33,29 +33,7 @@ export default class ProfileTab extends Component {
                   animated={false}
                   hidden={false}
                 />
-                <Image
-                  style={styles.mainLogo}
-                  source={require("../../assets/FinalLogoV.png")}
-                  resizeMode="contain"
-                />
-                <Text style={styles.mainText}>
-                  Las mejores oportunidades para ti
-                </Text>
-                <Button
-                  style={styles.signUpButton}
-                  textStyle={styles.signSkipText}
-                  text='Sign Up'
-                  onPress={() => this.onSignUpPress()} />
-                <Button
-                  style={styles.loginButton}
-                  textStyle={styles.loginText}
-                  text='Log In'
-                  onPress={() => this.onLoginPress()} />
-                <Button
-                  style={styles.skipButton}
-                  textStyle={styles.signSkipText}
-                  text='Skip'
-                  onPress={() => this.onSkipPress()} />
+                <Text>Set up this tab :)</Text>
             </View>
         )
     }

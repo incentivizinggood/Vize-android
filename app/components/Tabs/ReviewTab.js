@@ -9,17 +9,7 @@ import styles from './styles'
 export default class ReviewTab extends Component {
     state = {}
 
-    onLoginPress = () => {
-      this.setState({stopTimer: true})
-      // Actions.Login()
-    }
-
-    onSignUpPress = () => {
-      this.setState({stopTimer: true})
-      // Actions.Login()
-    }
-
-    onSkipPress = () => {
+    onReviewPress = () => {
       this.setState({stopTimer: true})
       // Actions.Login()
     }
@@ -33,29 +23,12 @@ export default class ReviewTab extends Component {
                   animated={false}
                   hidden={false}
                 />
-                <Image
-                  style={styles.mainLogo}
-                  source={require("../../assets/FinalLogoV.png")}
-                  resizeMode="contain"
-                />
-                <Text style={styles.mainText}>
-                  Las mejores oportunidades para ti
-                </Text>
+                <Text>Earn 100 pesos for your first review!</Text>
                 <Button
                   style={styles.signUpButton}
                   textStyle={styles.signSkipText}
-                  text='Sign Up'
-                  onPress={() => this.onSignUpPress()} />
-                <Button
-                  style={styles.loginButton}
-                  textStyle={styles.loginText}
-                  text='Log In'
-                  onPress={() => this.onLoginPress()} />
-                <Button
-                  style={styles.skipButton}
-                  textStyle={styles.signSkipText}
-                  text='Skip'
-                  onPress={() => this.onSkipPress()} />
+                  text='Add a review!'
+                  onPress={() => this.onReviewPress()} />
             </View>
         )
     }
