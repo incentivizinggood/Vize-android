@@ -4,6 +4,8 @@ import { Actions } from 'react-native-router-flux'
 import styles from './styles'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
+//import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+
 
 export default class SignUp extends Component {
     state = {
