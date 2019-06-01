@@ -24,7 +24,7 @@ const App = (props) => (
 				title="Vize"
 				navigationBarStyle={styles.statusBar}
 				titleStyle={styles.navTitle}
-				initial
+				// initial
 			/>
 			<Scene
 				key="SignUp"
@@ -52,9 +52,10 @@ const App = (props) => (
 				legacy={true}
 				tabBarPosition="bottom"
 				navigationBarStyle={styles.navBar}
+				left={()=>null}
 				titleStyle={styles.navTitle}
 				default="HomeTab"
-				// initial
+				initial
 			>
 				<Scene 
 					key="HomeTab" 
@@ -63,35 +64,41 @@ const App = (props) => (
 					icon={TabIcon} 
 					hideNavBar={true} 
 					component={HomeTab}
-					initial />
+					initial
+					/>
 				<Scene 
 					key="JobsTab" 
 					title="Jobs" 
 					iconName="Jobs" 
 					icon={TabIcon} 
 					hideNavBar={true} 
-				  	component={JobsTab} />
+					component={JobsTab}
+					initial
+					/>
 				<Scene 
 					key="ReviewTab" 
 					title="Review" 
 					iconName="Review" 
 					icon={TabIcon} 
 					hideNavBar={true} 
-					component={ReviewTab} />
+					component={ReviewTab}
+					/>
 				<Scene 
 					key="CompaniesTab" 
 					title="Companies" 
 					iconName="Companies" 
 					icon={TabIcon} 
 				  	hideNavBar={true} 
-				  	component={CompaniesTab} />
+				  	component={CompaniesTab}
+					/>
 				<Scene 
 					key="ProfileTab" 
 					title="Profile" 
 					iconName="Profile" 
 					icon={TabIcon} 
 					hideNavBar={true} 
-					component={ProfileTab} />
+					component={ProfileTab}
+					/>
 			</Scene>
 		</Stack>
 	</Router>

@@ -7,18 +7,19 @@ import {Actions} from 'react-native-router-flux'
 import styles from './styles'
 
 export default class CompaniesTab extends Component {
-    state = {}
-
-    onLoginPress = () => {
-      // Actions.Login()
+    state = {
+      loading: false,
+      jobs: [],
+      error: null
     }
 
-    onSignUpPress = () => {
-      // Actions.Login()
-    }
+    arrayholder = []
 
-    onSkipPress = () => {
-      // Actions.Login()
+    getCompanies = () => {
+      const url = ""
+      this.setState({ loading: true })
+
+      // make API call :)
     }
     
     render() {
@@ -30,29 +31,23 @@ export default class CompaniesTab extends Component {
                   animated={false}
                   hidden={false}
                 />
-                <Image
-                  style={styles.mainLogo}
-                  source={require("../../assets/FinalLogoV.png")}
-                  resizeMode="contain"
+                <TextInput
+                    // autoFocus
+                    placeholder="Search for a job"
+                    style={styles.searchInput}
+                    value={this.state.job}
+                    returnKeyType="done"
+                    enablesReturnKeyAutomatically
+                    onChangeText={(text) => this.setState({job: text})}
                 />
-                <Text style={styles.mainText}>
-                  Las mejores oportunidades para ti
-                </Text>
-                <Button
-                  style={styles.signUpButton}
-                  textStyle={styles.signSkipText}
-                  text='Sign Up'
-                  onPress={() => this.onSignUpPress()} />
-                <Button
-                  style={styles.loginButton}
-                  textStyle={styles.loginText}
-                  text='Log In'
-                  onPress={() => this.onLoginPress()} />
-                <Button
-                  style={styles.skipButton}
-                  textStyle={styles.signSkipText}
-                  text='Skip'
-                  onPress={() => this.onSkipPress()} />
+                {
+                  this.state.jobs.length === 0 ?
+                    <Text>Search for a job to see the best opportunities for you :) </Text>
+                     :
+                    <FlatList 
+                      data={this.state.jobs}
+                    />
+                }
             </View>
         )
     }

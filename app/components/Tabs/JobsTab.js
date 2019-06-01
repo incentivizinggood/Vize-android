@@ -1,29 +1,28 @@
 import React, {Component} from 'react'
-import {View, Text, Image } from 'react-native'
+import {TextInput, FlatList, View, Text, Image } from 'react-native'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
 // import {LoginButton, AccessToken} from 'react-native-fbsdk';
 import {Actions} from 'react-native-router-flux'
+// import {List, ListItem, SearchBar} from 'react-native-elements';
 import styles from './styles'
 
 export default class JobsTab extends Component {
-    state = {}
-
-    onLoginPress = () => {
-      this.setState({stopTimer: true})
-      // Actions.Login()
+    state = {
+      loading: false,
+      jobs: [],
+      error: null
     }
 
-    onSignUpPress = () => {
-      this.setState({stopTimer: true})
-      // Actions.Login()
+    arrayholder = []
+
+    getJobs = () => {
+      const url = ""
+      this.setState({ loading: true })
+
+      // make API call :)
     }
 
-    onSkipPress = () => {
-      this.setState({stopTimer: true})
-      // Actions.Login()
-    }
-    
     render() {
         return (
             <View style={styles.container}>
@@ -33,6 +32,23 @@ export default class JobsTab extends Component {
                   animated={false}
                   hidden={false}
                 />
+                <TextInput
+                    // autoFocus
+                    placeholder="Search for a job"
+                    style={styles.searchInput}
+                    value={this.state.job}
+                    returnKeyType="done"
+                    enablesReturnKeyAutomatically
+                    onChangeText={(text) => this.setState({job: text})}
+                />
+                {
+                  this.state.jobs.length === 0 ?
+                    <Text>Search for a job to see the best opportunities for you :) </Text>
+                     :
+                    <FlatList 
+                      data={this.state.jobs}
+                    />
+                }
             </View>
         )
     }
