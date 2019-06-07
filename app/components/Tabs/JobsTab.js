@@ -2,10 +2,19 @@ import React, {Component} from 'react'
 import {TextInput, FlatList, View, Text, Image } from 'react-native'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
-// import {LoginButton, AccessToken} from 'react-native-fbsdk';
 import {Actions} from 'react-native-router-flux'
-// import {List, ListItem, SearchBar} from 'react-native-elements';
 import styles from './styles'
+
+const JobListItem = (props) => {
+  // let jobTitle = props.title
+
+  return (
+    <View style={styles.jobListItemContainer}>
+      {/* <Image src={} style={styles.jobListItemImage} /> */}
+      <Text style={styles.jobListItemText}></Text>
+    </View>
+  )
+}
 
 export default class JobsTab extends Component {
     state = {
@@ -34,7 +43,7 @@ export default class JobsTab extends Component {
                 />
                 <TextInput
                     // autoFocus
-                    placeholder="Search for a job"
+                    placeholder="Search for a job..."
                     style={styles.searchInput}
                     value={this.state.job}
                     returnKeyType="done"
@@ -43,10 +52,11 @@ export default class JobsTab extends Component {
                 />
                 {
                   this.state.jobs.length === 0 ?
-                    <Text>Search for a job to see the best opportunities for you :) </Text>
+                    <Text style={styles.searchlessText}>Search for a job to see the best opportunities for you :) </Text>
                      :
-                    <FlatList 
+                    <FlatList
                       data={this.state.jobs}
+                      renderItem={job => <JobListItem job={job} />}
                     />
                 }
             </View>

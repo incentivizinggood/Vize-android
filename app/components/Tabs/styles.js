@@ -175,6 +175,36 @@ const styles = createStyles({
 		color: "#000",
 		fontWeight: "bold",
 		marginLeft: wp("1%")
+	},
+	searchInput: {
+		marginTop: hp("1%"),
+		width: wp("100%"),
+		height: hp("5%"),
+		padding: 0,
+		fontSize: 18,
+		borderColor: '#9b9b9b',
+		borderWidth: 2,
+		backgroundColor: '#fff',
+		paddingLeft: wp("5%"),
+		// borderTopWidth: 2,
+		borderRadius: 5
+	},
+	searchlessText: {
+		marginTop: hp("30%"),
+		fontSize: 16,
+		fontWeight: 'bold',
+		textAlign: 'center',
+		paddingLeft: wp('5%'),
+		paddingRight: wp('5%')
+	},
+	addAReviewText: {
+		marginTop: hp('30%'),
+		fontSize: 24,
+		fontWeight: 'bold',
+		textAlign: 'center',
+		paddingLeft: wp('5%'),
+		paddingRight: wp('5%'),
+		color: '#000'
 	}
 })
 

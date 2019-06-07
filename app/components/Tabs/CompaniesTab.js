@@ -33,7 +33,7 @@ export default class CompaniesTab extends Component {
                 />
                 <TextInput
                     // autoFocus
-                    placeholder="Search for a job"
+                    placeholder="Search for a company..."
                     style={styles.searchInput}
                     value={this.state.job}
                     returnKeyType="done"
@@ -42,7 +42,7 @@ export default class CompaniesTab extends Component {
                 />
                 {
                   this.state.jobs.length === 0 ?
-                    <Text>Search for a job to see the best opportunities for you :) </Text>
+                    <Text style={styles.searchlessText}>Search for a company to see the best opportunities for you :) </Text>
                      :
                     <FlatList 
                       data={this.state.jobs}

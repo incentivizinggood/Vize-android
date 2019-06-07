@@ -1,14 +1,14 @@
 import React from 'react'
-import Home from './Home'
-import Login from './Home/Login'
-import SignUp from './Home/SignUp'
-import HomeTab from './Tabs/HomeTab'
-import JobsTab from './Tabs/JobsTab'
-import ReviewTab from './Tabs/ReviewTab'
-import ProfileTab from './Tabs/ProfileTab'
-import CompaniesTab from './Tabs/CompaniesTab'
+import Home from '../Home'
+import Login from '../Home/Login'
+import SignUp from '../Home/SignUp'
+import HomeTab from '../Tabs/HomeTab'
+import JobsTab from '../Tabs/JobsTab'
+import ReviewTab from '../Tabs/ReviewTab'
+import ProfileTab from '../Tabs/ProfileTab'
+import CompaniesTab from '../Tabs/CompaniesTab'
 import TabIcon from './TabIcon'
-import createStyles from '../styles/base'
+import createStyles from '../../styles/base'
 import {Router, Scene, Stack} from 'react-native-router-flux'
 import PropTypes from 'prop-types'
 
@@ -57,47 +57,50 @@ const App = (props) => (
 				default="HomeTab"
 				initial
 			>
-				<Scene 
-					key="HomeTab" 
-					title="Home" 
-					iconName="Home" 
-					icon={TabIcon} 
-					hideNavBar={true} 
+				<Scene
+					key="HomeTab"
+					title="Home"
+					iconName="Home"
+					icon={TabIcon}
+					hideNavBar={true}
 					component={HomeTab}
-					initial
+					// initial
 					/>
-				<Scene 
-					key="JobsTab" 
-					title="Jobs" 
-					iconName="Jobs" 
-					icon={TabIcon} 
-					hideNavBar={true} 
+				<Scene
+					key="JobsTab"
+					title="Jobs"
+					iconName="Jobs"
+					icon={TabIcon}
+					hideNavBar={true}
 					component={JobsTab}
 					initial
 					/>
-				<Scene 
-					key="ReviewTab" 
-					title="Review" 
-					iconName="Review" 
-					icon={TabIcon} 
-					hideNavBar={true} 
+				<Scene
+					key="ReviewTab"
+					title="Review"
+					iconName="Review"
+					icon={TabIcon}
+					hideNavBar={true}
 					component={ReviewTab}
+					// initial
 					/>
-				<Scene 
-					key="CompaniesTab" 
-					title="Companies" 
-					iconName="Companies" 
-					icon={TabIcon} 
-				  	hideNavBar={true} 
-				  	component={CompaniesTab}
+				<Scene
+					key="CompaniesTab"
+					title="Companies"
+					iconName="Companies"
+					icon={TabIcon}
+				  	hideNavBar={true}
+					component={CompaniesTab}
+					// initial
 					/>
-				<Scene 
-					key="ProfileTab" 
-					title="Profile" 
-					iconName="Profile" 
-					icon={TabIcon} 
-					hideNavBar={true} 
+				<Scene
+					key="ProfileTab"
+					title="Profile"
+					iconName="Profile"
+					icon={TabIcon}
+					hideNavBar={true}
 					component={ProfileTab}
+					// initial
 					/>
 			</Scene>
 		</Stack>

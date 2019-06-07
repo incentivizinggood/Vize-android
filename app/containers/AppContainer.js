@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import App from '../components/App'
+import App from '../components/router/App'
 import {addImage, updateTimer, addPoints, subPoints, importPoints} from '../actions/index'
 
 const mapStateToProps = (state) => ({

@@ -23,7 +23,7 @@ export default class ReviewTab extends Component {
                   animated={false}
                   hidden={false}
                 />
-                <Text>Earn 100 pesos for your first review!</Text>
+                <Text style={styles.addAReviewText}>Earn 100 pesos for your first review :)</Text>
                 <Button
                   style={styles.signUpButton}
                   textStyle={styles.signSkipText}
