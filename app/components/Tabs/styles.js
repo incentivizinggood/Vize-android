@@ -6,7 +6,7 @@ import {StyleSheet} from 'react-native'
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
 
 const styles = createStyles({
-    navBar: {
+  navBar: {
 		backgroundColor: '#47A6D6',
 		marginTop: STATUSBAR_HEIGHT
 	},
@@ -205,6 +205,105 @@ const styles = createStyles({
 		paddingLeft: wp('5%'),
 		paddingRight: wp('5%'),
 		color: '#000'
+	},
+	suggestionContainer: {
+		borderBottomWidth: 1,
+		borderBottomColor: 'grey',
+		padding: hp('0.5%')
+	},
+	suggestionText: {
+		fontSize: 14
+	},
+	companyNameInput: {
+		padding: 0,
+		paddingLeft: wp('1%'),
+		marginTop: hp('2%'),
+		fontSize: 16,
+		height: hp('5%'),
+		width: wp('70%'),
+		borderColor: 'gray',
+		borderWidth: 1
+	},
+	companyNameTextWrapper: {
+		marginTop: hp('2%'),
+		height: hp('5%')
+	},
+	companyNameText: {
+		fontSize: 20,
+		fontWeight: 'bold'
+	},
+	addReviewTextContainer: {
+		marginTop: hp('2.5%'),
+		width: wp('100%')
+	},
+	addReviewTitleText: {
+		alignItems: 'center',
+		textAlign: 'left',
+		marginLeft: wp('3%'),
+		fontSize: 18,
+		color: 'black',
+	},
+	addReviewTitleInput: {
+		padding: 0,
+		paddingLeft: wp('1%'),
+		marginTop: hp('1.5%'),
+		fontSize: 14,
+		height: hp('4%'),
+		width: wp('90%'),
+		borderBottomColor: 'gray',
+		borderBottomWidth: 1
+	},
+	nextButton: {
+		alignItems: 'center',
+		backgroundColor: "#47a6d6",
+		borderWidth: 1,
+		borderColor: "#fff",
+		width: wp("60%"),
+		height: hp("5%"),
+		marginTop: hp("5%"),
+		justifyContent: "center",
+		shadowOffset: {width: 0, height: 1},
+		borderRadius: 2,
+		shadowColor: "#000",
+		shadowOpacity: 0.35,
+		shadowRadius: 5,
+		elevation: 2,
+    flexDirection: "row",
+	},
+	addReviewRatingContainer: {
+		width: wp('100%'),
+		flexDirection:'row',
+		justifyContent: 'space-between',
+		margin: 0,
+		height: hp('7%'),
+		marginTop: hp('1%'),
+		padding: 0
+	},
+	rating: {
+		margin: 0
+	},
+	doneButton: {
+		alignItems: 'center',
+		backgroundColor: "#47a6d6",
+		borderWidth: 1,
+		borderColor: "#fff",
+		width: wp("60%"),
+		height: hp("5%"),
+		marginTop: hp("25%"),
+		justifyContent: "center",
+		shadowOffset: {width: 0, height: 1},
+		borderRadius: 2,
+		shadowColor: "#000",
+		shadowOpacity: 0.35,
+		shadowRadius: 5,
+		elevation: 2,
+		flexDirection: "row"
+	},
+	overallSatisfactionText: {
+		alignItems: 'center',
+		textAlign: 'left',
+		fontSize: 18,
+		color: 'black',
 	}
 })
 

@@ -53,6 +53,10 @@ const baseStyles = {
 	navTitle: {
 		flex: 1,
 		color: '#FFF',
+	},
+	navTitleCenter: {
+		flex: 1,
+		color: '#FFF',
 		textAlign: 'center',
 	},
 	navBar: {

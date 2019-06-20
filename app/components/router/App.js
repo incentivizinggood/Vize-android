@@ -7,6 +7,9 @@ import JobsTab from '../Tabs/JobsTab'
 import ReviewTab from '../Tabs/ReviewTab'
 import ProfileTab from '../Tabs/ProfileTab'
 import CompaniesTab from '../Tabs/CompaniesTab'
+import AddReviewPage1 from '../Tabs/AddReviewPage1'
+import AddReviewPage2 from '../Tabs/AddReviewPage2'
+import AddReviewPage3 from '../Tabs/AddReviewPage3'
 import TabIcon from './TabIcon'
 import createStyles from '../../styles/base'
 import {Router, Scene, Stack} from 'react-native-router-flux'
@@ -23,7 +26,7 @@ const App = (props) => (
 				hideNavBar={true}
 				title="Vize"
 				navigationBarStyle={styles.statusBar}
-				titleStyle={styles.navTitle}
+				titleStyle={styles.navTitleCenter}
 				// initial
 			/>
 			<Scene
@@ -32,7 +35,7 @@ const App = (props) => (
 				hideNavBar={true}
 				title="Sign Up"
 				navigationBarStyle={styles.navBar}
-				titleStyle={styles.navTitle}
+				titleStyle={styles.navTitleCenter}
 				// initial
 			/>
 			<Scene
@@ -41,7 +44,7 @@ const App = (props) => (
 				hideNavBar={true}
 				title="Login"
 				navigationBarStyle={styles.navBar}
-				titleStyle={styles.navTitle}
+				titleStyle={styles.navTitleCenter}
 				// initial
 			/>
 			<Scene
@@ -53,7 +56,7 @@ const App = (props) => (
 				tabBarPosition="bottom"
 				navigationBarStyle={styles.navBar}
 				left={()=>null}
-				titleStyle={styles.navTitle}
+				titleStyle={styles.navTitleCenter}
 				default="HomeTab"
 				initial
 			>
@@ -73,7 +76,7 @@ const App = (props) => (
 					icon={TabIcon}
 					hideNavBar={true}
 					component={JobsTab}
-					initial
+					// initial
 					/>
 				<Scene
 					key="ReviewTab"
@@ -82,8 +85,9 @@ const App = (props) => (
 					icon={TabIcon}
 					hideNavBar={true}
 					component={ReviewTab}
-					// initial
+					initial
 					/>
+
 				<Scene
 					key="CompaniesTab"
 					title="Companies"
@@ -103,7 +107,42 @@ const App = (props) => (
 					// initial
 					/>
 			</Scene>
+			<Scene
+				key="AddReviewPage1"
+				component={AddReviewPage1}
+				hideNavBar={false}
+				title="Vize"
+				legacy={true}
+				navigationBarStyle={styles.navBar}
+				// left={()=>null}
+				titleStyle={styles.navTitle}
+				navBarButtonColor="white"
+				// initial
+			/>
+			<Scene
+				key="AddReviewPage2"
+				component={AddReviewPage2}
+				hideNavBar={false}
+				title="Vize"
+				navigationBarStyle={styles.navBar}
+				titleStyle={styles.navTitle}
+				navBarButtonColor="white"
+				// initial
+			/>
+			<Scene
+				key="AddReviewPage3"
+				component={AddReviewPage3}
+				hideNavBar={false}
+				title="Vize"
+				navigationBarStyle={styles.navBar}
+				titleStyle={styles.navTitle}
+				navBarButtonColor="white"
+				// initial
+			/>
 		</Stack>
+		{/* <Stack key="AddReview">
+
+		</Stack> */}
 	</Router>
 )
 

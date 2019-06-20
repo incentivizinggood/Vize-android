@@ -10,13 +10,13 @@ const styles = createStyles({
 		opacity: 1,
 		height: hp("15%"),
 		marginTop: hp("15%"),
-		width: wp("60%"),
+		width: wp("60%")
 	},
 	vLogo: {
 		opacity: 1,
 		height: hp("9%"),
 		marginTop: hp("12%"),
-		width: wp("10%"),
+		width: wp("10%")
 	},
 	mainText: {
 		marginTop: hp("12%"),
@@ -41,7 +41,7 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row",
+    flexDirection: "row"
 	},
 	loginButton: {
 		alignItems: 'center',
@@ -58,7 +58,7 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row",
+    flexDirection: "row"
 	},
 	skipButton: {
 		alignItems: 'center',
@@ -76,15 +76,15 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row",
+    flexDirection: "row"
 	},
 	signSkipText: {
 		color: "white",
-		fontSize: 14,
+		fontSize: 14
 	},
 	loginText: {
 		color: "#47a6d6",
-		fontSize: 14,
+		fontSize: 14
 	},
 	emailInput: {
 		marginTop: hp("5%"),
@@ -117,7 +117,7 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row",
+    flexDirection: "row"
 	},
 	orView: {
 		flexDirection:'row', 
@@ -164,7 +164,7 @@ const styles = createStyles({
 		backgroundColor: "#fff",
 		borderWidth: 1,
 		borderColor: "#fff",
-		justifyContent: "center",
+		justifyContent: "center"
 	},
 	loginSignupButtonText: {
 		fontSize: 12,

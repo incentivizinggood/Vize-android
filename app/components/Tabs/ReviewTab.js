@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, Text, Image } from 'react-native'
+import {View, Text, Image, Alert } from 'react-native'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
 // import {LoginButton, AccessToken} from 'react-native-fbsdk';
@@ -11,9 +11,10 @@ export default class ReviewTab extends Component {
 
     onReviewPress = () => {
       this.setState({stopTimer: true})
-      // Actions.Login()
+      // Alert.alert(Actions.currentScene)
+      Actions.AddReviewPage1()
     }
-    
+
     render() {
         return (
             <View style={styles.container}>
