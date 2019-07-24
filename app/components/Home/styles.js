@@ -1,9 +1,7 @@
-import {Platform, StatusBar} from 'react-native'
 import createStyles from '../../styles/base'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen'
 import {StyleSheet} from 'react-native'
-
-const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
+import {colors, fonts} from '../../styles/base'
 
 const styles = createStyles({
 	mainLogo: {
@@ -11,12 +9,6 @@ const styles = createStyles({
 		height: hp("15%"),
 		marginTop: hp("15%"),
 		width: wp("60%")
-	},
-	vLogo: {
-		opacity: 1,
-		height: hp("9%"),
-		marginTop: hp("12%"),
-		width: wp("10%")
 	},
 	mainText: {
 		marginTop: hp("12%"),
@@ -28,7 +20,7 @@ const styles = createStyles({
 	},
 	signUpButton: {
 		alignItems: 'center',
-		backgroundColor: "#47a6d6",
+		backgroundColor: colors.primary,
 		borderWidth: 1,
 		borderColor: "#fff",
 		width: wp("60%"),
@@ -41,13 +33,13 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row"
+    	flexDirection: "row"
 	},
 	loginButton: {
 		alignItems: 'center',
 		backgroundColor: "#fff",
 		borderWidth: 1,
-		borderColor: "#47a6d6",
+		borderColor: colors.primary,
 		width: wp("60%"),
 		height: hp("5%"),
 		marginTop: hp("3%"),
@@ -58,11 +50,11 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row"
+    	flexDirection: "row"
 	},
 	skipButton: {
 		alignItems: 'center',
-		backgroundColor: "#47a6d6",
+		backgroundColor: colors.primary,
 		borderWidth: 1,
 		borderColor: "#fff",
 		width: wp("25%"),
@@ -76,14 +68,14 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row"
+    	flexDirection: "row"
 	},
 	signSkipText: {
 		color: "white",
 		fontSize: 14
 	},
 	loginText: {
-		color: "#47a6d6",
+		color: colors.primary,
 		fontSize: 14
 	},
 	emailInput: {
@@ -92,7 +84,7 @@ const styles = createStyles({
 		height: hp("5%"),
 		padding: 0,
 		borderBottomColor: '#9b9b9b',
-    borderBottomWidth: 2
+    	borderBottomWidth: 2
 	},
 	passwordInput: {
 		marginTop: hp("1%"),
@@ -100,11 +92,11 @@ const styles = createStyles({
 		height: hp("5%"),
 		padding: 0,
 		borderBottomColor: '#9b9b9b',
-    borderBottomWidth: 2
+    	borderBottomWidth: 2
 	},
 	signUpPageButton: {
 		alignItems: 'center',
-		backgroundColor: "#47a6d6",
+		backgroundColor: colors.primary,
 		borderWidth: 1,
 		borderColor: "#fff",
 		width: wp("60%"),
@@ -117,7 +109,7 @@ const styles = createStyles({
 		shadowOpacity: 0.35,
 		shadowRadius: 5,
 		elevation: 2,
-    flexDirection: "row"
+    	flexDirection: "row"
 	},
 	orView: {
 		flexDirection:'row', 
@@ -157,7 +149,7 @@ const styles = createStyles({
 		width: wp("70%")
 	},
 	hasAccountText: {
-		fontSize: 12
+		fontSize: fonts.sm
 	},
 	loginSignupButton: {
 		alignItems: 'center',
@@ -167,7 +159,7 @@ const styles = createStyles({
 		justifyContent: "center"
 	},
 	loginSignupButtonText: {
-		fontSize: 12,
+		fontSize: fonts.sm,
 		color: "#000",
 		fontWeight: "bold",
 		marginLeft: wp("1%")

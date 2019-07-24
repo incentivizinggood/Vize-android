@@ -5,6 +5,7 @@ import StatusBar from '../../customComponents/StatusBar'
 import {Actions} from 'react-native-router-flux'
 import styles from './styles'
 
+// beginning of displaying jobs as a flatlist for lazy rendering (efficiency)
 const JobListItem = (props) => {
   // let jobTitle = props.title
 

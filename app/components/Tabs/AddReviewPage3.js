@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {View, TextInput, Image, Text, TouchableHighlight} from 'react-native'
+import {View, Text, TouchableHighlight} from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import styles from './styles'
 import Button from '../../customComponents/Button'
@@ -9,37 +9,11 @@ import { AirbnbRating } from 'react-native-ratings'
 export default class AddReviewPage3 extends Component {
     state = { }
 
-    updateSearch = (text) => {
-        this.setState({
-            companySearchText: text,
-            companySelected: false
-        },() => {
-            if (this.state.companySearchText.length > 0) {
-                let suggestedCompanies = []
-                companiesRetreivedFromDatabase.forEach(company => {
-                  if (company.name.toLowerCase().indexOf(this.state.companySearchText.toLowerCase()) >= 0)
-                    suggestedCompanies.push(company)
-                })
-                suggestedCompanies = suggestedCompanies.sort(compare)
-                if (suggestedCompanies.length > 5)
-                  suggestedCompanies = suggestedCompanies.slice(0,5)
-                this.setState({suggestedCompanies})
-            }
-        })
-    }
-
     onNextPress = () => { Actions.popTo("_ReviewTab") }
 
-    healthAndSafetyRatingCompleted = (rating) => { }
-
-    managerRelationshipRatingCompleted = (ratings) => { }
-
-    workEnvironmentRatingCompleted = (ratings) => { }
-
-    benefitsRatingCompleted = (ratings) => { }
+    overallSatisfactionCompleted = (rating) => { }
 
     render() {
-        let {companyName, companySelected, suggestedCompanies} = this.state
         return (
             <View style={styles.container}>
                 <StatusBar
@@ -71,7 +45,7 @@ export default class AddReviewPage3 extends Component {
                         ratingCount={5}
                         size={30}
                         style={styles.rating}
-                        onFinishRating={this.healthAndSafetyRatingCompleted}
+                        onFinishRating={this.overallSatisfactionCompleted}
                     />
 
                     <Button

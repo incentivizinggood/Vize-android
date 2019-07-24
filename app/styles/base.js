@@ -2,7 +2,6 @@ import {Platform, StatusBar, StyleSheet, Dimensions} from 'react-native'
 
 const STATUSBAR_HEIGHT = Platform.OS === 'ios' ? 20 : StatusBar.currentHeight
 
-
 export const ONE_SECOND = 1000
 
 export const dimensions = {

@@ -12,17 +12,14 @@ export default class SignUp extends Component {
     }
 
     authenticateUser = () => {
-        //make api call and other stuff
-        // Actions.Map()
+        // make api calls, handle failures, navigate accordingly, etc.
     }
 
     onSignUpPress = () => {
-        this.setState({stopTimer: true})
         Actions.TabsView()
     }
 
     render() {
-        console.log("this is a test")
         return (
             <View style={styles.container}>
                 <StatusBar

@@ -3,24 +3,24 @@ import {View, Text, Image } from 'react-native'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
 // import {LoginButton, AccessToken} from 'react-native-fbsdk';
+// install react-native-fbsdk for facebook login - perhaps later version
 import {Actions} from 'react-native-router-flux'
 import styles from './styles'
 
 export default class MainScreen extends Component {
     state = {}
+    // fill state as needed
 
     onLoginPress = () => {
-      this.setState({stopTimer: true})
+      // handle login
       Actions.Login()
     }
 
     onSignUpPress = () => {
-      this.setState({stopTimer: true})
       Actions.SignUp()
     }
 
     onSkipPress = () => {
-      this.setState({stopTimer: true})
       Actions.TabsView()
     }
     

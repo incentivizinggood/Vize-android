@@ -7,3 +7,6 @@ export function addImage(coordinate, source) {
 		source,
 	}
 }
+
+// define your actions here
+// super useful to organize your code

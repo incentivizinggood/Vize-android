@@ -4,10 +4,13 @@ import { Actions } from 'react-native-router-flux'
 import styles from './styles'
 import Button from '../../customComponents/Button'
 import StatusBar from '../../customComponents/StatusBar'
+
+// helper function
 let compare = (a, b) => {
     return (parseInt(a.Year) < parseInt(b.Year) ? 1 : -1)
 }
 
+// fake data
 const companiesRetreivedFromDatabase = [
     {
         name: 'Samsung',
@@ -35,6 +38,7 @@ const companiesRetreivedFromDatabase = [
     },
 ]
 
+// suggestions as user starts searching
 const Suggestions = (props) => {
     const options = props.suggestedCompanies.map(company => (
         <TouchableHighlight
@@ -60,13 +64,7 @@ export default class AddReviewPage1 extends Component {
     }
 
     onCompanySuggestionPress = (company) => {
-        // this.resetSuggestedMovies()
-        // this.flipLoadingScreen()
-        // await sleep(500)
-        // let recommendedMovies = computeNineSimilarMovies(movie, movies)
-        // this.updateStep()
         this.setState({ companyName: company.name, companySelected: true })
-        // this.flipLoadingScreen()
     }
 
     updateSearch = (text) => {
@@ -129,6 +127,7 @@ export default class AddReviewPage1 extends Component {
                     companySelected === false ?
                     <View>
                         <TextInput
+                            autoFocus
                             style={styles.companyNameInput}
                             onChangeText={(text) => this.updateSearch(text)}
                             value={this.state.companySearchText}
@@ -149,7 +148,7 @@ export default class AddReviewPage1 extends Component {
                         <View style={styles.addReviewTextContainer}>
                             <Text style={styles.addReviewTitleText}>Review Title</Text>
                         </View>
-                        <TextInput //update these functions :)
+                        <TextInput
                             style={styles.addReviewTitleInput}
                             onChangeText={(text) => this.updateReviewTitle(text)}
                             value={this.state.reviewTitleText}
@@ -159,7 +158,7 @@ export default class AddReviewPage1 extends Component {
                         <View style={styles.addReviewTextContainer}>
                             <Text style={styles.addReviewTitleText}>Job Title</Text>
                         </View>
-                        <TextInput //update these functions :)
+                        <TextInput
                             style={styles.addReviewTitleInput}
                             onChangeText={(text) => this.updateJobTitle(text)}
                             value={this.state.jobTitleText}
@@ -169,7 +168,7 @@ export default class AddReviewPage1 extends Component {
                         <View style={styles.addReviewTextContainer}>
                             <Text style={styles.addReviewTitleText}>Number of Months Worked</Text>
                         </View>
-                        <TextInput //update these functions :)
+                        <TextInput
                             style={styles.addReviewTitleInput}
                             onChangeText={(text) => this.updateNumMonths(text)}
                             value={this.state.numMonthsText}
@@ -179,7 +178,7 @@ export default class AddReviewPage1 extends Component {
                         <View style={styles.addReviewTextContainer}>
                             <Text style={styles.addReviewTitleText}>Pros</Text>
                         </View>
-                        <TextInput //update these functions :)
+                        <TextInput
                             style={styles.addReviewTitleInput}
                             onChangeText={(text) => this.updatePros(text)}
                             value={this.state.prosText}

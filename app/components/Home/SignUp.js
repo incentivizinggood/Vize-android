@@ -21,8 +21,8 @@ export default class SignUp extends Component {
         Actions.TabsView()
     }
 
+    // Can probably break up this and login component for smaller components
     render() {
-        console.log("this is a test")
         return (
             <View style={styles.container}>
                 <StatusBar

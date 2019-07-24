@@ -12,11 +12,13 @@ import AddReviewPage2 from '../Tabs/AddReviewPage2'
 import AddReviewPage3 from '../Tabs/AddReviewPage3'
 import TabIcon from './TabIcon'
 import createStyles from '../../styles/base'
-import {Router, Scene, Stack} from 'react-native-router-flux'
+import {Router, Scene, Stack, Actions, Tabs} from 'react-native-router-flux'
 import PropTypes from 'prop-types'
 
 const styles = createStyles()
 
+// holds scenes for the app
+// only tap between tabs allowed - normal and expected behavior
 const App = (props) => (
 	<Router {...props}>
 		<Stack key="root">
@@ -27,7 +29,7 @@ const App = (props) => (
 				title="Vize"
 				navigationBarStyle={styles.statusBar}
 				titleStyle={styles.navTitleCenter}
-				// initial
+				initial
 			/>
 			<Scene
 				key="SignUp"
@@ -52,15 +54,14 @@ const App = (props) => (
 				hideNavBar={false}
 				title="Vize"
 				tabs={true}
-				legacy={true}
 				tabBarPosition="bottom"
 				navigationBarStyle={styles.navBar}
 				left={()=>null}
 				titleStyle={styles.navTitleCenter}
-				default="HomeTab"
-				initial
+				lazy={true}
+				// initial
 			>
-				<Scene
+				<Tabs
 					key="HomeTab"
 					title="Home"
 					iconName="Home"
@@ -69,7 +70,7 @@ const App = (props) => (
 					component={HomeTab}
 					// initial
 					/>
-				<Scene
+				<Tabs
 					key="JobsTab"
 					title="Jobs"
 					iconName="Jobs"
@@ -78,17 +79,17 @@ const App = (props) => (
 					component={JobsTab}
 					// initial
 					/>
-				<Scene
+				<Tabs
 					key="ReviewTab"
 					title="Review"
 					iconName="Review"
 					icon={TabIcon}
 					hideNavBar={true}
 					component={ReviewTab}
-					initial
+					// initial
 					/>
 
-				<Scene
+				<Tabs
 					key="CompaniesTab"
 					title="Companies"
 					iconName="Companies"
@@ -97,7 +98,7 @@ const App = (props) => (
 					component={CompaniesTab}
 					// initial
 					/>
-				<Scene
+				<Tabs
 					key="ProfileTab"
 					title="Profile"
 					iconName="Profile"
